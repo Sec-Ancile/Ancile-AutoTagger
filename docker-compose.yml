@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    image: public.ecr.aws/d4w1s1q4/ancile-autotagger:latest
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      ACCESS_KEY: ${ACCESS_KEY}
+      SECRET_KEY: ${SECRET_KEY}
+      API_KEY: ${API_KEY}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      ACCOUNT_ID: ${ACCOUNT_ID}
+      CLOUD_ACCOUNT_ID: ${CLOUD_ACCOUNT_ID}
+      SKIP_BUCKETS: ${SKIP_BUCKETS}
+      ANCILE_TAGGER_BUCKET_NAME: ${ANCILE_TAGGER_BUCKET_NAME}
+      ANCILE_TAGGER_BUCKET_REGION: ${ANCILE_TAGGER_BUCKET_REGION}
+    depends_on:
+      postgres:
+        condition: service_healthy
