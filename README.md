@@ -14,5 +14,5 @@
 4. **Run the Setup Script**
   - Execute the setup script to configure your environment:
     ```bash
-    ./script.sh
+    ./ancile-autotagger-script.sh
     ```
