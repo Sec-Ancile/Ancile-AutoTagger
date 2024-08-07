@@ -22,4 +22,4 @@ deactivate
 docker compose down
 
 # Run Docker Compose
-docker compose up
+docker compose up -d
