@@ -22,9 +22,11 @@ To do this:
 After setting up your environment variables, you can proceed to configure your environment by running the appropriate setup script based on your operating system.
 
 ### **For macOS:**
-If you're using macOS, execute the following command in your terminal:
+- If you're using macOS, execute the following command in your terminal:
 
+    ```bash
     ./ancile-autotagger-script.sh
+    ```
 
 ### **For Windows:**
 For Windows users, depending on your shell environment, run one of the following commands:
