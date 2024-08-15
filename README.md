@@ -46,5 +46,6 @@ For Windows users, depending on your shell environment, run one of the following
 - If Linux, simply run:
 
     ```bash
+    chmod +x ./ancile-autotagger-script-l-u.sh
     ./ancile-autotagger-script-l-u.sh
     ```
