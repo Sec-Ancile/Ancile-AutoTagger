@@ -1,18 +1,50 @@
-# **Setup Instructions**
-1. **Clone the Repository**
-  - First, clone the repository to your local machine:
+# **Ancile AutoTagger Setup Instructions**
+This guide will walk you through the process of setting up the Ancile AutoTagger on your local machine. Follow the steps below to get started:
+
+## **1. Clone the Repository**
+To begin, you need to clone the Ancile AutoTagger repository to your local environment. This will give you access to all the necessary files and scripts required for setup.
+
+- Execute the following command in your terminal:
+
     ```bash
     git clone https://github.com/Sec-Ancile/Ancile-AutoTagger.git
     ```
-2. **Install Docker**
-  - Follow the official Docker installation guide for your operating system:
-    - [Docker Installation](https://docs.docker.com/engine/install/)
+    
+## **2. Create a .env File**
+Once you have cloned the repository, you will need to create a .env file in the root directory of the project. This file will store your environment-specific variables such as AWS credentials, database configuration, and more.
 
-3. **Create a .env File**
-  - Create a .env file in the root directory using the provided env-demo file as a template. Make sure to update it with your own environment variables.
+To do this:
 
-4. **Run the Setup Script**
-  - Execute the setup script to configure your environment:
+- Use the env-demo file provided in the repository as a template.
+- Update the .env file with your own environment variables.
+
+## **3. Run the Setup Script**
+After setting up your environment variables, you can proceed to configure your environment by running the appropriate setup script based on your operating system.
+
+### **For macOS:**
+- If you're using macOS, execute the following command in your terminal:
+
     ```bash
     ./ancile-autotagger-script.sh
+    ```
+
+### **For Windows:**
+For Windows users, depending on your shell environment, run one of the following commands:
+
+- If you are using PowerShell:
+
+    ```powershell
+    ./ancile-autotagger-script.ps1
+    ```
+- If you are using WSL (Windows Subsystem for Linux):
+
+    ```bash
+    ./ancile-autotagger-script-l-u.sh
+    ```
+
+### **For Linux:**
+- If Linux, simply run:
+
+    ```bash
+    ./ancile-autotagger-script-l-u.sh
     ```

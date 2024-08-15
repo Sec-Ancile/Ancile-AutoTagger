@@ -1,11 +1,22 @@
-ACCOUNT_ID=
-CLOUD_LABEL=
-ACCESS_KEY=
-SECRET_KEY=
-API_KEY=
-POSTGRES_DB=
-POSTGRES_USER=
-POSTGRES_PASSWORD=
-SKIP_BUCKETS=
-ANCILE_TAGGER_BUCKET_NAME=
-ANCILE_TAGGER_BUCKET_REGION=
+# Ancile Account and Cloud Configuration
+ACCOUNT_ID=<your-ancile-account-id>                  # Your Ancile Account ID
+
+# AWS Credentials
+ACCESS_KEY=<your-aws-access-key>                     # AWS Access Key
+SECRET_KEY=<your-aws-secret-key>                     # AWS Secret Key
+CLOUD_LABEL=<your-cloud-account-name>                # Custom label for your cloud account
+
+# Ancile Configuration
+API_KEY=<your-ancile-api-key>                        # Ancile API Key
+
+# PostgreSQL Database Configuration
+POSTGRES_DB=<your-database-name>                     # Name of the PostgreSQL database
+POSTGRES_USER=<your-database-username>               # Username for the PostgreSQL database
+POSTGRES_PASSWORD=<your-database-password>           # Password for the PostgreSQL database
+
+# S3 Bucket Configuration
+ANCILE_TAGGER_BUCKET_NAME=<your-bucket-name>         # Name of the S3 bucket for Ancile
+ANCILE_TAGGER_BUCKET_REGION=<your-bucket-region>     # Region where the S3 bucket is hosted
+
+# Optional Settings
+SKIP_BUCKETS=<buckets-to-skip>                       # List of buckets to skip (if any)
