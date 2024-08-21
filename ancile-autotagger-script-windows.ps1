@@ -42,7 +42,9 @@ python generate_init_sql.py
 # & ./venv/Scripts/Deactivate.ps1
 
 # Stop and remove Docker containers
-docker compose down
+docker-compose down
+
+docker-compose pull
 
 # Run Docker Compose
 docker-compose up -d

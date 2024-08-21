@@ -21,5 +21,7 @@ deactivate
 
 docker compose down
 
+docker compose pull
+
 # Run Docker Compose
 docker compose up -d
