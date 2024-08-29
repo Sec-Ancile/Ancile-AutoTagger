@@ -20,3 +20,5 @@ ANCILE_TAGGER_BUCKET_REGION=<your-bucket-region>     # Region where the S3 bucke
 
 # Optional Settings
 SKIP_BUCKETS=<buckets-to-skip>                       # List of buckets to skip (if any)
+
+SERVICE_TO_SKIP=<dynamodb,s3,rds>                    # List of services to skip (if any)
